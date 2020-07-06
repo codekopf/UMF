@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.codekopf.api</groupId>
+    <artifactId>umf</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>umf-frontend</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <description>UMF Angular frontend</description>
+  <name>UMF - Frontend</name>
+
+  <properties>
+    <node.version>v12.16.1</node.version><!--Better ID -->
+    <npm.version>6.4.1</npm.version><!--Better ID -->
+    <frontend-maven-plugin.version>1.6</frontend-maven-plugin.version><!--Better ID -->
+    <environment>prod</environment>
+  </properties>
+
+<!--  <build>-->
+<!--    <plugins>-->
+<!--      <plugin>-->
+<!--        <groupId>com.github.eirslett</groupId>-->
+<!--        <artifactId>frontend-maven-plugin</artifactId>-->
+<!--        <version>${frontend-maven-plugin.version}</version>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <id>install node and npm</id>-->
+<!--            <goals>-->
+<!--              <goal>install-node-and-npm</goal>-->
+<!--            </goals>-->
+<!--            <configuration>-->
+<!--              <workingDirectory>${project.basedir}</workingDirectory>-->
+<!--              <nodeVersion>${node.version}</nodeVersion>-->
+<!--              <npmVersion>${npm.version}</npmVersion>-->
+<!--            </configuration>-->
+<!--          </execution>-->
+<!--          <execution>-->
+<!--            <id>Karma test</id>-->
+<!--            <goals>-->
+<!--              <goal>npm</goal>-->
+<!--            </goals>-->
+<!--            <configuration>-->
+<!--              <workingDirectory>${project.basedir}</workingDirectory>-->
+<!--              <arguments>run ci-test</arguments>-->
+<!--            </configuration>-->
+<!--            <phase>test</phase>-->
+<!--          </execution>-->
+<!--          <execution>-->
+<!--            <id>npm-ci</id>-->
+<!--            <goals>-->
+<!--              <goal>npm</goal>-->
+<!--            </goals>-->
+<!--            <configuration>-->
+<!--              <workingDirectory>${project.basedir}</workingDirectory>-->
+<!--              <arguments>ci &#45;&#45;userconfig=".npmrc"</arguments>-->
+<!--            </configuration>-->
+<!--          </execution>-->
+<!--          <execution>-->
+<!--            <id>build</id>-->
+<!--            <goals>-->
+<!--              <goal>npm</goal>-->
+<!--            </goals>-->
+<!--            <configuration>-->
+<!--              <workingDirectory>${project.basedir}</workingDirectory>-->
+<!--              <arguments>run-script ${activatedProperties}</arguments>-->
+<!--            </configuration>-->
+<!--            <phase>prepare-package</phase>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--      </plugin>-->
+<!--      <plugin>-->
+<!--        <artifactId>maven-assembly-plugin</artifactId>-->
+<!--        <version>3.1.0</version>-->
+<!--        <configuration>-->
+<!--          <descriptors>-->
+<!--            <descriptor>zip-assembly.xml</descriptor>-->
+<!--          </descriptors>-->
+<!--        </configuration>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <id>make-assembly</id> &lt;!&ndash; this is used for inheritance merges &ndash;&gt;-->
+<!--            <phase>package</phase> &lt;!&ndash; append to the packaging phase. &ndash;&gt;-->
+<!--            <goals>-->
+<!--              <goal>single</goal> &lt;!&ndash; goals == mojos &ndash;&gt;-->
+<!--            </goals>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--      </plugin>-->
+<!--    </plugins>-->
+<!--  </build>-->
+</project>

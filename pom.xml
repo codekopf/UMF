@@ -1,0 +1,102 @@
+<!--<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">-->
+<!--    <modelVersion>4.0.0</modelVersion>-->
+<!--    <groupId>com.codekopf.api</groupId>-->
+<!--    <artifactId>umf</artifactId>-->
+<!--    <version>1.0.0-SNAPSHOT</version>-->
+<!--    <packaging>pom</packaging>-->
+<!--    <name>UserManagementFramework - Global</name>-->
+
+
+<!--    <properties>-->
+<!--        <java.version>1.8</java.version>-->
+
+<!--        &lt;!&ndash;Default properties&ndash;&gt;-->
+<!--        <activatedProperties>dev</activatedProperties>-->
+
+<!--        <maven.compiler.source>${java.version}</maven.compiler.source>-->
+<!--        <maven.compiler.target>${java.version}</maven.compiler.target>-->
+<!--        <maven.compiler.compilerVersion>${java.version}</maven.compiler.compilerVersion>-->
+<!--    </properties>-->
+
+<!--    <modules>-->
+<!--        <module>umf-backend</module>-->
+<!--        <module>umf-frontend</module>-->
+<!--    </modules>-->
+
+<!--    <profiles>-->
+<!--        <profile>-->
+<!--            <id>dev</id>-->
+<!--            &lt;!&ndash; Dev Env. Properties &ndash;&gt;-->
+<!--            <properties>-->
+<!--                <activatedProperties>dev</activatedProperties>-->
+<!--            </properties>-->
+<!--        </profile>-->
+<!--        <profile>-->
+<!--            <id>prod</id>-->
+<!--            &lt;!&ndash; Prod Env. Properties &ndash;&gt;-->
+<!--            <properties>-->
+<!--                <activatedProperties>prod</activatedProperties>-->
+<!--            </properties>-->
+<!--        </profile>-->
+
+<!--        <profile>-->
+<!--            <id>testEnv</id>-->
+<!--            &lt;!&ndash; Prod Env. Properties &ndash;&gt;-->
+<!--            <properties>-->
+<!--                <activatedProperties>testEnv</activatedProperties>-->
+<!--            </properties>-->
+<!--        </profile>-->
+<!--    </profiles>-->
+
+<!--    <dependencyManagement>-->
+<!--        <dependencies>-->
+<!--            <dependency>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-checkstyle-plugin</artifactId>-->
+<!--                <version>6.1.1</version>-->
+<!--            </dependency>-->
+<!--        </dependencies>-->
+<!--    </dependencyManagement>-->
+
+<!--    &lt;!&ndash; TODO What about this: findbugs and asciidoctor ? &ndash;&gt;-->
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.codehaus.mojo</groupId>-->
+<!--                <artifactId>findbugs-maven-plugin</artifactId>-->
+<!--                <version>3.0.1</version>-->
+<!--                <configuration>-->
+<!--                    <excludeFilterFile>find_bugs_exclude.xml</excludeFilterFile>-->
+<!--                    <effort>Max</effort>-->
+<!--                    <threshold>Low</threshold>-->
+<!--                    <xmlOutput>true</xmlOutput>-->
+<!--                    <xmlOutputDirectory>target/site</xmlOutputDirectory>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+
+<!--            <plugin>-->
+<!--                <groupId>org.asciidoctor</groupId>-->
+<!--                <artifactId>asciidoctor-maven-plugin</artifactId>-->
+<!--                <version>1.5.5</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>output-html</id>-->
+<!--                        <phase>generate-resources</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>process-asciidoc</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <attributes>-->
+<!--                                <safe-mode>SAFE</safe-mode>-->
+<!--                            </attributes>-->
+<!--                            <sourceDirectory>${project.basedir}/specification</sourceDirectory>-->
+<!--                            <backend>html5</backend>-->
+<!--                            <imagesDir>${project.basedir}/specification</imagesDir>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
+<!--</project>-->
