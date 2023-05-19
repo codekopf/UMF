@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { UsersService } from './services/users.service';
+
 
 @NgModule({
   declarations: [
@@ -10,9 +14,17 @@ import { UsersComponent } from './users/users.component';
     UsersComponent
   ],
   imports: [
-    BrowserModule
+    AppRoutingModule,
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    // {provide: APP_BASE_HREF, useValue: '/'},
+    // AuthHttp,
+    // AuthService,
+    // AuthGuard,
+    UsersService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

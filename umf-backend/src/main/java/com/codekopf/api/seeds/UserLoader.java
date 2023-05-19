@@ -76,9 +76,9 @@ public class UserLoader {
     private String generatePassword() {
         val chars = new StringBuilder("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789");
         return IntStream.range(0,5)
-                .mapToObj(i -> ThreadLocalRandom.current().nextInt(0, chars.length()))
-                .map(chars::charAt)
-                .collect(StringBuilder::new, StringBuilder::append, StringBuilder::append)
-                .toString();
+                        .mapToObj(i -> ThreadLocalRandom.current().nextInt(0, chars.length()))
+                        .map(chars::charAt)
+                        .collect(StringBuilder::new, StringBuilder::append, StringBuilder::append)
+                        .toString();
     }
 }

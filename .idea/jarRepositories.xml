@@ -2,9 +2,9 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
-      <option name="id" value="public" />
-      <option name="name" value="Public releases group" />
-      <option name="url" value="http://nexus:8081/repository/maven-public" />
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />
@@ -12,9 +12,24 @@
       <option name="url" value="none" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="public" />
+      <option name="name" value="Public releases group" />
+      <option name="url" value="http://nexus:8081/repository/maven-public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="public" />
+      <option name="name" value="Public releases group" />
+      <option name="url" value="http://czeppc00025:8090/repository/nexus.epcomm.cz/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="spring-milestones" />
       <option name="name" value="Spring Milestones" />
       <option name="url" value="https://repo.spring.io/milestone" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="public" />
+      <option name="name" value="EPC Nexus public releases group" />
+      <option name="url" value="https://nexus.epcomm-int.cz:8443/repository/maven-public" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />

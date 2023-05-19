@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/UMF.iml" filepath="$PROJECT_DIR$/UMF.iml" />
       <module fileurl="file://$PROJECT_DIR$/umf-backend/umf-backend.iml" filepath="$PROJECT_DIR$/umf-backend/umf-backend.iml" />
-      <module fileurl="file://$PROJECT_DIR$/umf-frontend/umf-frontend.iml" filepath="$PROJECT_DIR$/umf-frontend/umf-frontend.iml" />
     </modules>
   </component>
 </project>

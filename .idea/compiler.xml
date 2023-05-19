@@ -2,23 +2,16 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="umf-backend" />
-        <module name="UMF" />
-      </profile>
+      <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="UMF" target="1.5" />
-      <module name="umf-backend" target="1.8" />
+      <module name="UMF" target="11" />
       <module name="user-management-api" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="umf-backend" options="-parameters" />
+      <module name="umf-backend" options="" />
       <module name="user-management-api" options="-parameters" />
     </option>
   </component>

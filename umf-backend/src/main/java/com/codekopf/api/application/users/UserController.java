@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
+//import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
@@ -36,7 +36,7 @@ public class UserController {
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    @PreAuthorize(AuthorityHelper.AUTHORIZED_TO_DO_ANYTHING)
+//    @PreAuthorize(AuthorityHelper.AUTHORIZED_TO_DO_ANYTHING)
     public ResponseEntity<OutgoingUserDTO> createNewUser(@RequestBody final IncomingUserDTO incomingUserDTO) {
         val user = incomingUserDTO.toDomainObject();
         this.userService.createUser(user);
@@ -49,7 +49,7 @@ public class UserController {
             value="/{id}",
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    @PreAuthorize(AuthorityHelper.AUTHORIZED_TO_DO_ANYTHING)
+//    @PreAuthorize(AuthorityHelper.AUTHORIZED_TO_DO_ANYTHING)
     public ResponseEntity<OutgoingUserDTO> getUser(@PathVariable("id") final UUID id) {
         val user = this.userService.findById(id);
         return ResponseEntity.ok(new OutgoingUserDTO(user));
@@ -73,7 +73,7 @@ public class UserController {
             value="/{id}",
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    @PreAuthorize(AuthorityHelper.AUTHORIZED_TO_DO_ANYTHING)
+//    @PreAuthorize(AuthorityHelper.AUTHORIZED_TO_DO_ANYTHING)
     public ResponseEntity<OutgoingUserDTO> updateUser(@PathVariable("id") final UUID id,
                                                       @RequestBody final IncomingUserDTO incomingUserDTO) {
         val newUser = incomingUserDTO.toDomainObject();
@@ -89,7 +89,7 @@ public class UserController {
             method = RequestMethod.DELETE,
             value="/{id}"
     )
-    @PreAuthorize(AuthorityHelper.AUTHORIZED_TO_DO_ANYTHING)
+//    @PreAuthorize(AuthorityHelper.AUTHORIZED_TO_DO_ANYTHING)
     public ResponseEntity<HttpStatus> updateUser(@PathVariable("id") final UUID id) {
         this.userService.deleteUser(id);
         return ResponseEntity.status(HttpStatus.OK).build();

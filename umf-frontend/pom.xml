@@ -13,9 +13,10 @@
   <artifactId>umf-frontend</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <description>UMF Angular frontend</description>
   <name>UMF - Frontend</name>
+  <description>UMF Angular frontend</description>
 
+  <!-- TODO clean up this -->
   <properties>
     <node.version>v12.16.1</node.version><!--Better ID -->
     <npm.version>6.4.1</npm.version><!--Better ID -->
